@@ -1,6 +1,7 @@
 package mySimpleSpringApp;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 public class myApp {
@@ -10,7 +11,11 @@ public class myApp {
 //		Fruit fruit = new Fruit(); 
 //		Vegetable vegetable = new Vegetable(); 
 		
-		ApplicationContext context = new FileSystemXmlApplicationContext("appContext.xml");
+		// FileSystemXmlApplicationContext sees xml in entire project
+		// ApplicationContext context = new FileSystemXmlApplicationContext("appContext.xml");
+		
+		// if we moved xml file in the package we need to use ClassPathXmlApplicationContext:
+		ApplicationContext context = new ClassPathXmlApplicationContext("myTestPackage/appContext.xml");
 		Fruit fruit = context.getBean("fruit", Fruit.class); 
 		Vegetable vegetable = (Vegetable) context.getBean("vegetable");
 		
