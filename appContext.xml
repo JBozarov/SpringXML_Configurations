@@ -5,4 +5,8 @@
 
     <bean id="fruit" class="mySimpleSpringApp.Fruit"/>
     <bean id="vegetable" class="mySimpleSpringApp.Vegetable" />
+    
+    <bean  id="fruitWithName" class="mySimpleSpringApp.Fruit">
+    	<constructor-arg index="0" value="Jahongir" />
+    </bean>
 </beans>
