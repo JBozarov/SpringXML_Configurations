@@ -15,4 +15,5 @@
     <bean  id="fruitWithName" class="mySimpleSpringApp.Fruit">
     	<property name="myName" value="Jahongir Property"></property>
     </bean>
+    
 </beans>
