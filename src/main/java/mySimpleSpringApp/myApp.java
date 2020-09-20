@@ -4,6 +4,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
+import setterBeanConfig.Meal;
+
 public class myApp {
 
 	public static void main(String[] args) {
@@ -27,6 +29,7 @@ public class myApp {
 		
 		Vegetable myOtherVegetable = context.getBean("vegetableWithName", Vegetable.class); 
 		System.out.println(myOtherVegetable.talkAboutYourself());
+		
 	}
 
 }

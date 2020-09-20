@@ -35,4 +35,11 @@
     	</property>
     </bean>
     
+    <!-- using p namespace did not work, please trubleshoot 
+    <bean id="vegUsingPNamespace" class="mySimpleSpringApp.Vegetable" p:myName="Squash"/> -->
+  
+    
+    
+    
+    
 </beans>
