@@ -9,7 +9,7 @@
     <!-- This is setting up property using index ( first property is index 0)  -->
     <!-- <bean  id="fruitWithName" class="mySimpleSpringApp.Fruit">
     	<constructor-arg index="0" value="Jahongir" />
-    </bean> -->
+    </bean>s -->
     
     <!-- This is setting up property using property tag -->
     <bean  id="fruitWithName" class="mySimpleSpringApp.Fruit">
