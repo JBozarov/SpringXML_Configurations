@@ -14,6 +14,9 @@ public class myApp {
 		// FileSystemXmlApplicationContext sees xml in entire project
 		ApplicationContext context = new FileSystemXmlApplicationContext("appContext.xml");
 		
+		Fruit myOtherFruit = context.getBean("fruitWithListAndMap", Fruit.class); 
+		System.out.println(myOtherFruit.talkAboutYourself());
+		
 		// if we moved xml file in the package we need to use ClassPathXmlApplicationContext:
 		// ApplicationContext context = new ClassPathXmlApplicationContext("myTestPackage/appContext.xml");
 		Fruit fruit = context.getBean("fruit", Fruit.class); 
@@ -22,8 +25,8 @@ public class myApp {
 		System.out.println(fruit.talkAboutYourself());
 		System.out.println(vegetable.talkAboutYourself());
 		
-		Fruit myOtherFruit = context.getBean("fruitWithName", Fruit.class); 
-		System.out.println(myOtherFruit.talkAboutYourself());
+		Vegetable myOtherVegetable = context.getBean("vegetableWithName", Vegetable.class); 
+		System.out.println(myOtherVegetable.talkAboutYourself());
 	}
 
 }
