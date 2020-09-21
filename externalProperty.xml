@@ -1,14 +1,17 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+	   xmlns:context="http://www.springframework.org/schema/context">
+	   
+	   <!-- <context:property-placeholder location="src/main/java/myApp.properties" /> -->
 
     
-      <bean id="apple" class="externalPropertyBean.Apple"/>
-      <bean id="phone" class="externalPropertyBean.Phone"/>
-    
-    
-    
-    
+      <bean id="vegetable" class="externalPropertyBean.Vegetable"/>
+      <bean id="fruit" class="externalPropertyBean.Fruit"/>
+      
+      <bean id="externalFruit" class="externalPropertyBean.Vegetable">
+      		<property name="definition" value="${def-fruit}"/>
+      </bean>
     
     
     

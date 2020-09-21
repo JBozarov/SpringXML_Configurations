@@ -9,6 +9,12 @@ public class Main {
 
 		ApplicationContext context = new FileSystemXmlApplicationContext("externalProperty.xml");
 		
+		Vegetable vegetable = context.getBean("vegetable", Vegetable.class); 
+		Fruit fruit = context.getBean("fruit", Fruit.class); 
+		System.out.println(vegetable.talkAboutMyself());
+		System.out.println(fruit.talkAboutMyself());
+		
+		
 		
 	}
 
