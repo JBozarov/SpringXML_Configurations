@@ -1,0 +1,17 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+	   xmlns:context="http://www.springframework.org/schema/context">
+    
+    
+   	  <bean id="fruit" class="autowireByName.Fruit"/>
+      <bean id="vegetable" class="autowireByName.Vegetable"/>
+      
+      <bean id="fruit2" class="autowireByName.Fruit"/>
+      <bean id="vegetable2" class="autowireByName.Vegetable"/>
+      
+      
+ 	  <!-- name fruit in line 7 has to match with name in Meal.class line 4. Both are fruit otheriwise it won't work -->
+      <bean id="meal" class="autowireByName.Meal" autowire="byName"/>
+    
+</beans>

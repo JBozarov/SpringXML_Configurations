@@ -1,17 +1,10 @@
-package autowireByType;
+package autowireByName;
 
 public class Meal {
 	private Fruit fruit;
 	private Vegetable vegetable;
 
 	public Meal () {	
-	}
-
-
-	public Meal(Fruit fruit, Vegetable vegetable) {
-		super();
-		this.fruit = fruit;
-		this.vegetable = vegetable;
 	}
 
 
