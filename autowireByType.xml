@@ -1,0 +1,12 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+	   xmlns:context="http://www.springframework.org/schema/context">
+    
+      <bean id="vegetable" class="autowireByType.Vegetable"/>
+      <bean id="fruit" class="autowireByType.Fruit"/>
+      
+      <!-- ONLY WIRES if there is only one type of bean which is only one type of fruit and only on type of vegetable. If we had 2 and autowire doesn't know which one to wire -->
+      <bean id="meal" class="autowireByType.Meal" autowire="byType"/>
+    
+</beans>
