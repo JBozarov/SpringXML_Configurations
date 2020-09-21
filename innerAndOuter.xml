@@ -1,0 +1,20 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    
+      <bean id="vegetable" class="innerAndOuterBeans.Vegetable"/>
+      <bean id="fruit" class="innerAndOuterBeans.Fruit"/>
+      
+      <bean id="meal" class="innerAndOuterBeans.Meal">
+      		<property name="fruit">
+      			<bean id="fruitInnerBean" class="innerAndOuterBeans.Fruit">
+      				<property name="name" value="Fruit Value inner"/>
+      				<property name="description" value="Inner bean fruit description" />
+      			</bean>
+      		</property>
+      </bean>
+    
+    
+    
+</beans>
