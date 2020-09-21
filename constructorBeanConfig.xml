@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    
+        <bean id="fruit" class="constructorInjectionBean.Fruit"/>
+    	<bean id="vegetable" class="constructorInjectionBean.Vegetable" />
+    	
+    	<bean id="meal" class="constructorInjectionBean.Meal">
+    		<constructor-arg index="0" ref="fruit"/>
+    		<constructor-arg index="1" ref="vegetable"/>
+    	</bean>
+    
+    
+    
+    
+    
+    
+    
+</beans>
